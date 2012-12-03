@@ -8,11 +8,7 @@ Spree::Core::Engine.routes.prepend do
     end
   end
 
-<<<<<<< HEAD
   namespace :api, :defaults => { :format => 'json' } do
-=======
-  namespace :api do
->>>>>>> Use versioncake for versioning of API resources
     resources :products do
       resources :variants
       resources :product_properties
@@ -23,11 +19,8 @@ Spree::Core::Engine.routes.prepend do
     resources :variants, :only => [:index] do
     end
 
-<<<<<<< HEAD
     resources :option_types
 
-=======
->>>>>>> Use versioncake for versioning of API resources
     resources :orders do
       resources :return_authorizations
       member do
@@ -45,7 +38,6 @@ Spree::Core::Engine.routes.prepend do
           put :purchase
           put :void
           put :credit
-<<<<<<< HEAD
         end
       end
 
@@ -53,13 +45,10 @@ Spree::Core::Engine.routes.prepend do
         member do
           put :ready
           put :ship
-=======
->>>>>>> Use versioncake for versioning of API resources
         end
       end
     end
 
-<<<<<<< HEAD
     resources :zones
     resources :countries, :only => [:index, :show]
     resources :addresses, :only => [:show, :update]
@@ -70,12 +59,6 @@ Spree::Core::Engine.routes.prepend do
       resources :taxons do
         member do
           get :jstree
-=======
-      resources :shipments do
-        member do
-          put :ready
-          put :ship
->>>>>>> Use versioncake for versioning of API resources
         end
       end
     end
@@ -86,11 +69,9 @@ Spree::Core::Engine.routes.prepend do
     resources :taxonomies do
       resources :taxons
     end
-<<<<<<< HEAD
+
     resources :inventory_units, :only => [:show, :update]
-=======
 
     resources :taxons, :only => [:index]
->>>>>>> Use versioncake for versioning of API resources
   end
 end
